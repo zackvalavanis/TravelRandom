@@ -3,6 +3,8 @@ from app.database import Base
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import UUID 
 import uuid
+from app.models.trip import Trip
+
 
 class User(Base): 
   __tablename__ = "users"
