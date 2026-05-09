@@ -13,5 +13,8 @@ class TripsResponse(BaseModel):
   class Config: 
     from_attributes=True
 
+class TripsCreate(BaseModel): 
+  countries: List[str]
+  cities: List[str] | None = None
+  cities: List[str]
 
-    
