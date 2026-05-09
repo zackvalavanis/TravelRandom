@@ -5,7 +5,7 @@ from uuid import UUID
 from typing import List
 
 
-class TripsResponse(BaseModel): 
+class TripResponse(BaseModel): 
   id: UUID
   countries: List[str]
   cities: List[str] | None=None
@@ -13,7 +13,7 @@ class TripsResponse(BaseModel):
   class Config: 
     from_attributes=True
 
-class TripsCreate(BaseModel): 
+class TripCreate(BaseModel): 
   countries: List[str]
   cities: List[str] | None = None
   cities: List[str]
