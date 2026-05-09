@@ -3,6 +3,7 @@ import { Header } from "./Screens/Header"
 import { HomeScreen } from "./Screens/HomeScreen"
 import { Footer } from "./Screens/Footer"
 import { LoginPage } from "./Screens/LoginPage"
+import { AuthProvider } from "./Auth/AuthProvider"
 
 
 function App() {
@@ -18,14 +19,16 @@ function App() {
       ),
       children: [
         { path: '/', element: <HomeScreen /> },
-        { path: '/loginpage', element: <LoginPage /> }
+        { path: '/login-page', element: <LoginPage /> }
       ]
     },
   ])
 
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </>
   )
 }

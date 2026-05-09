@@ -47,7 +47,7 @@ export function LoginPage() {
       login(data.access_token)
 
       toast.success("Logged in successfully")
-      navigate('/profile')
+      navigate('/')
     } catch (error) {
       console.error(error)
       toast.error("Server error. Try Again.")
